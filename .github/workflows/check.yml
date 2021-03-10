@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 1
       - name: ⚙️ Install swiftlint
         run: |
-          brew install swiftlint
+          brew install swiftlint && true
         env:
           HOMEBREW_NO_INSTALL_CLEANUP: 1
       - name: 🧹 Code Lint
@@ -23,7 +23,7 @@ jobs:
           swiftlint --strict
       - name: ⚙️ Install iblinter
         run: |
-          brew install IBDecodable/homebrew-tap/iblinter
+          brew install IBDecodable/homebrew-tap/iblinter && true
         env:
           HOMEBREW_NO_INSTALL_CLEANUP: 1
       - name: 🧹 Storyboard Lint
