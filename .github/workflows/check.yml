@@ -28,9 +28,10 @@ jobs:
           swiftlint --strict
       - name: ⚙️ Install iblinter
         run: |
+          set -x
           binPath=$(which iblinter)
           if [[ -z "$binPath" ]]; then
-            brew install iblinter
+            brew install iblinter || true
           else
             iblinter version  
           fi
