@@ -12,7 +12,7 @@ jobs:
       - name: ⚙️ Install swiftlint
         run: |
           binPath=$(which swiftlint)
-          if [[ -z "$binPath" ]]; then
+          if [ -z "$binPath" ]; then
             brew install swiftlint
           else
             swiftlint version  
@@ -30,7 +30,7 @@ jobs:
         run: |
           set -x
           ibPath="$(which iblinter)"
-          if [[ -z "$ibPath" ]]; then
+          if [ -z "$ibPath" ]; then
             brew install iblinter || true
           else
             iblinter version  
