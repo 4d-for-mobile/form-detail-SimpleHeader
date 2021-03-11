@@ -11,10 +11,15 @@ jobs:
           fetch-depth: 1
       - name: ⚙️ Install swiftlint
         run: |
-          brew install swiftlint && true
+          binPath=$(which swiftlint)
+          if [[ -z "$binPath" ]]; then
+            brew install swiftlint
+          else
+            swiftlint version  
+          fi
         env:
           HOMEBREW_NO_INSTALL_CLEANUP: 1
-      - name: 🧹 Code Lint
+      - name: 🧹 iOS Code Lint
         run: |
           cd ios
           if [ ! -f ".swiftlint.yml" ]; then
@@ -23,10 +28,15 @@ jobs:
           swiftlint --strict
       - name: ⚙️ Install iblinter
         run: |
-          brew install IBDecodable/homebrew-tap/iblinter && true
+          binPath=$(which iblinter)
+          if [[ -z "$binPath" ]]; then
+            brew install iblinter
+          else
+            iblinter version
+          fi
         env:
           HOMEBREW_NO_INSTALL_CLEANUP: 1
-      - name: 🧹 Storyboard Lint
+      - name: 🧹 iOS Storyboard Lint
         run: |
           cd ios
           if [ ! -f ".iblinter.yml" ]; then
