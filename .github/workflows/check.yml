@@ -59,7 +59,7 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: 1
-      - name: 👷 Swift build
+      - name: 👷 iOS build
         run: |
           cd ios
           curl -fsSL $RELEASE_REPO/form/scripts/swift_build.sh | bash -s
