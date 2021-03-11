@@ -11,8 +11,7 @@ jobs:
           fetch-depth: 1
       - name: ⚙️ Install swiftlint
         run: |
-          binPath=$(which swiftlint)
-          if [ -z "$binPath" ]; then
+          if [ -z "$(which swiftlint)" ]; then
             brew install swiftlint
           else
             swiftlint version  
@@ -29,9 +28,8 @@ jobs:
       - name: ⚙️ Install iblinter
         run: |
           set -x
-          ibPath="$(which iblinter)"
-          if [ -z "$ibPath" ]; then
-            brew install iblinter || true
+          if [ -z "$(which iblinter)" ]; then
+            brew install iblinter
           else
             iblinter version  
           fi
