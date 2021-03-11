@@ -29,12 +29,14 @@ jobs:
       - name: ⚙️ Install iblinter
         run: |
           set -x
-          binPath=$(which iblinter)
-          if [[ -z "$binPath" ]]; then
+          bash --version
+          ibPath=$(which iblinter)
+          if [[ -z "$ibPath" ]]; then
             brew install iblinter || true
           else
             iblinter version  
           fi
+          exit 0
         env:
           HOMEBREW_NO_INSTALL_CLEANUP: 1
       - name: 🧹 iOS Storyboard Lint
