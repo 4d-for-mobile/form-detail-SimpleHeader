@@ -32,9 +32,8 @@ jobs:
           if [[ -z "$binPath" ]]; then
             brew install iblinter
           else
-            iblinter version
+            iblinter version  
           fi
-          exit 0
         env:
           HOMEBREW_NO_INSTALL_CLEANUP: 1
       - name: 🧹 iOS Storyboard Lint
