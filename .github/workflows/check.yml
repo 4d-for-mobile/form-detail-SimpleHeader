@@ -29,8 +29,7 @@ jobs:
       - name: ⚙️ Install iblinter
         run: |
           set -x
-          bash --version
-          ibPath=$(which iblinter)
+          ibPath="$(which iblinter)"
           if [[ -z "$ibPath" ]]; then
             brew install iblinter || true
           else
