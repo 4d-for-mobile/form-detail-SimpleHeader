@@ -14,7 +14,7 @@
     <!-- Generated with detail form template named "Simple Header Detail" -->
 
     <androidx.core.widget.NestedScrollView
-        style="@style/Theme.MyApplication.Custom.Background.Alt4"
+        style="@style/Theme.QMobileApp.Custom.Background.Alt4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
-                    style="@style/Theme.MyApplication.Card.Background.Alt3"
+                    style="@style/Theme.QMobileApp.Card.Background.Alt3"
                     android:layout_width="0dp"
                     android:layout_height="280dp"
                     android:layout_marginBottom="12dp"
@@ -160,7 +160,7 @@
             <!-- EVERYTHING BELOW WILL BE DUPLICATED FOR EACH FIELD YOU DROP AT THE BOTTOM OF THE
                  TEMPLATE IN THE PROJECT EDITOR -->
             <androidx.cardview.widget.CardView
-                style="@style/Theme.MyApplication.Card.Background.Alt3"
+                style="@style/Theme.QMobileApp.Card.Background.Alt3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
